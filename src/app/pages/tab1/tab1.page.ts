@@ -19,7 +19,7 @@ export class Tab1Page {
     ) {}
 
     ionViewWillEnter() {
-        //this.scan();
+        this.scan();
     }
 
     scan() {
@@ -35,10 +35,6 @@ export class Tab1Page {
             })
             .catch(err => {
                 console.log('Error', err);
-                this.dataLocal.guardarRegsitro(
-                    'QRCode',
-                    'geo:40.73151796986687,-74.06087294062502'
-                );
             });
     }
 }

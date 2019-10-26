@@ -11,6 +11,7 @@ declare var mapboxgl: any;
 export class MapaPage implements OnInit {
     lat: number;
     lon: number;
+    apiToken = 'insertYourMapBoxAPI';
 
     constructor(private route: ActivatedRoute) {}
 
@@ -25,8 +26,7 @@ export class MapaPage implements OnInit {
     ngAfterViewInit() {
         // Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
         // Add 'implements AfterViewInit' to the class.
-        mapboxgl.accessToken =
-            'pk.eyJ1IjoianVhbm9hIiwiYSI6ImNrMjdqMndtMTIwNzUzZ25ydGd5ZWFra2EifQ.R5o10WTid1oVRkmzGvh5zA';
+        mapboxgl.accessToken = this.apiToken;
         const map = new mapboxgl.Map({
             style: 'mapbox://styles/mapbox/dark-v9',
             center: [this.lon, this.lat],
