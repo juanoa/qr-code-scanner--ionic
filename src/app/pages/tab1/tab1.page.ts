@@ -35,7 +35,10 @@ export class Tab1Page {
             })
             .catch(err => {
                 console.log('Error', err);
-                this.dataLocal.guardarRegsitro('QRCode', 'https://juanoa.com');
+                this.dataLocal.guardarRegsitro(
+                    'QRCode',
+                    'geo:40.73151796986687,-74.06087294062502'
+                );
             });
     }
 }

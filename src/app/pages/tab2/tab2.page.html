@@ -14,7 +14,7 @@
 
 <ion-content color="dark">
     <ion-list color="dark">
-        <ion-item detail color="dark" *ngFor="let registro of dataLocal.guardados" (click)="abrirRegistro()">
+        <ion-item detail color="dark" *ngFor="let registro of dataLocal.guardados" (click)="abrirRegistro(registro)">
             <ion-icon slot="start" [name]="registro.icon"></ion-icon>
             <ion-label>
                 <h2>{{registro.text}}</h2>
